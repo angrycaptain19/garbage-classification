@@ -43,7 +43,7 @@ gen = {
 model = load_model('../input/best-model/the_best_model.h5')
 
 labels = gen["train"].class_indices
-labels = dict((v, k) for k, v in labels.items())
+labels = {v: k for k, v in labels.items()}
 
 test_x, test_y = gen["valid"].__getitem__(1)
 preds = model.predict(test_x)

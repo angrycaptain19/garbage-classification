@@ -4,7 +4,7 @@ data_dir = 'Garbage classification'
 
 
 def get_data_generator(img_shape):
-    gen = {
+    return {
         "train": ImageDataGenerator(
             horizontal_flip=True,
             vertical_flip=True,
@@ -31,11 +31,8 @@ def get_data_generator(img_shape):
         ),
     }
 
-    return gen
-
 
 if __name__ == '__main__':
     data_gen = get_data_generator((300, 300))
     # print(data_gen["train"].class_indices)
     print(len(data_gen["train"].classes))
-    pass
