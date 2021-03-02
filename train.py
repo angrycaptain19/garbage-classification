@@ -22,6 +22,4 @@ def train_and_valid(model, data_generator):
                                   callbacks=callbacks_list)
 
 
-if __name__ == '__main__':
-
-    pass
+pass
